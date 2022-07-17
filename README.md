@@ -1,2 +1,8 @@
 # Course3Week4Assignment
-R Package to describe American National  Fatality Analysis Reporting System (FARS) data 2012-2015  
+This R Package  describes American National  Fatality Analysis Reporting System (FARS) data 2012-2015. 
+
+#Installation
+First install the "devtools" package on your R system.  Then you may install and load this package from GitHub with:
+
+# install.packages("devtools")
+devtools::install_github("MohsenSoltanifar/descfars")
