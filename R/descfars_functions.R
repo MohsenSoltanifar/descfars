@@ -72,8 +72,8 @@ fars_read_years <- function(years) {
     file <- make_filename(year)
     tryCatch({
       dat <- fars_read(file)
-      dplyr::mutate(dat, year = year) %>%
-        dplyr::select(MONTH, year)
+      dplyr::mutate(dat, year = "year") %>%
+        dplyr::select("MONTH", "year")
     }, error = function(e) {
       warning("invalid year: ", year)
       return(NULL)
@@ -104,9 +104,9 @@ fars_read_years <- function(years) {
 fars_summarize_years <- function(years) {
   dat_list <- fars_read_years(years)
   dplyr::bind_rows(dat_list) %>%
-    dplyr::group_by(year, MONTH) %>%
-    dplyr::summarize(n = n()) %>%
-    tidyr::spread(year, n)
+    dplyr::group_by_("year", "MONTH") %>%
+    dplyr::summarize_(n = "n()") %>%
+    tidyr::spread_("year", "n")
 }
 
 #5.Function:
