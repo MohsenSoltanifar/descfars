@@ -1,11 +1,21 @@
-Course3Week4Assignment:
+README
+================
+Mohsen Soltanifar
+17/07/2022
 
-This R Package  describes American National  Fatality Analysis Reporting System (FARS) data 2012-2015. 
+<!-- README.md is generated from README.Rmd. -->
 
-Installation Instructions:
+# descfars : Build R Project (Course)
 
-First install the "devtools" package on your R system.  Then the user may install and load this package from GitHub with:
+The goal of descfars is to present descriptive statistics for fars data.
 
-install.packages("devtools")
+## Installation
 
+To install this package to run on your system, please first install and
+load the devtools package. Then you may install and load this package
+from [GitHub](https://github.com/) with:
+
+``` r
+# install.packages("devtools")
 devtools::install_github("MohsenSoltanifar/descfars")
+```

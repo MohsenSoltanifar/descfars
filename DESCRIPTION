@@ -1,0 +1,20 @@
+Package: descfars
+Version: 0.1-0
+Date: 2022-07-17
+Depends: R (>= 4.1.0)
+Imports: dplyr, graphics, magrittr, maps, readr, tidyr
+Title: descriptive R package for fars data
+Author: Mohsen Soltanifar <mohsen.soltanifar@gmail.com>
+Maintainer: Mohsen Soltanifar <mohsen.soltanifar@gmail.com>
+Description: A set  of functions that presents descriptive statistics and plots for FARS 2012-2015 data
+License: GPL (>= 3)
+URL: https://github.com/MohsenSoltanifar/descfars
+Encoding: UTF-8
+LazyData: true
+Suggests: 
+    rmarkdown,
+    knitr,
+    testthat (>= 3.0.0)
+VignetteBuilder: knitr
+RoxygenNote: 7.2.0
+Config/testthat/edition: 3
