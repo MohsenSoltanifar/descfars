@@ -1,4 +1,3 @@
-#1.Function:
 #' fars_read
 #'
 #' This function reads file from .csv input file.
@@ -30,7 +29,6 @@ fars_read <- function(filename) {
 }
 
 
-#2.Function:
 #' make_filename
 #'
 #' This function gets year and creates file name based on that input year.
@@ -47,9 +45,12 @@ fars_read <- function(filename) {
 #' @export
 make_filename <- function(year) {
   year <- as.integer(year)
-  sprintf("accident_%d.csv.bz2", year)}
+  system.file("extdata",
+              sprintf("accident_%d.csv.bz2", year),
+              package = "descfars",
+              mustWork = TRUE)
+}
 
-#3.Function:
 #' fars_read_years
 #'
 #' This function reads data per input year and returns a tibble data matrix of 2 columns (Month,year).
@@ -82,7 +83,6 @@ fars_read_years <- function(years) {
 }
 
 
-#4.Function:
 #' fars_summarize_years
 #'
 #' This function gets the year in the datset and returns a tibble datamatrix of two columns showing the counts of fatalities by month
@@ -109,7 +109,6 @@ fars_summarize_years <- function(years) {
     tidyr::spread_("year", "n")
 }
 
-#5.Function:
 #' fars_map_state
 #'
 #' This function plots the map of pointwise car fatalities in given year at a given American state.
