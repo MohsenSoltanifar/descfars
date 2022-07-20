@@ -1,0 +1,8 @@
+cache: packages
+channels: 
+  - conda-forge
+dependencies: 
+  - r-base=4.1
+  - r-tidyverse
+language: r
+name: my_r_env
